@@ -101,6 +101,12 @@ All Rec Room assets and trademarks belong to Against Gravity.
 
 ---
 
+## 💾 Depot Manifest
+
+5515810233259164887
+
+---
+
 ## 📄 License
 
 MIT — see [LICENSE](LICENSE)
