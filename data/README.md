@@ -12,5 +12,6 @@ This folder contains static JSON config files used by the server at runtime.
 | `game_configs.json` | GameConfigs (game mode settings) |
 | `config_v2.json` | ConfigV2 (client configuration) |
 | `rooms.json` | Default importable rooms |
+| `amplitude.json` | Amplitude analytics configuration |
 
 > These files are loaded at startup and cached in memory.
