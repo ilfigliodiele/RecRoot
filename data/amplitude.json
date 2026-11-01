@@ -1,0 +1,5 @@
+{
+  "AnalyticsEnabled": true,
+  "AmplitudeApiKey": "rec_room_local_server",
+  "ServerUrl": "http://localhost:5000"
+}
