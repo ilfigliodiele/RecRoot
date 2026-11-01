@@ -24,21 +24,31 @@ RecRoot/
 ├── main.py               # Entry point
 ├── requirements.txt      # Python dependencies
 ├── config/
-│   └── settings.py       # Server configuration
+│   └── settings.py       # Server configuration & service map
 ├── core/
 │   ├── auth.py           # JWT authentication
-│   ├── cache.py          # In-memory cache
+│   ├── cache.py          # In-memory thread-safe cache
 │   └── rate_limiter.py   # Rate limiting middleware
 ├── routes/
-│   ├── account.py        # Account & login endpoints
-│   ├── avatar.py         # Avatar items & equipment
-│   ├── config.py         # ConfigV2 & GameConfigs
+│   ├── api.py            # Startup endpoints (versioncheck, gameconfigs, amplitude, gamesight)
+│   ├── auth.py           # Login & register
+│   ├── accounts.py       # Account profile endpoints
+│   ├── config.py         # ConfigV2, AvatarItems, Consumables, Equipment
 │   ├── rooms.py          # Room import & management
-│   └── consumables.py    # Consumables & inventory
+│   ├── matchmaking.py    # Matchmaking endpoints
+│   ├── player_settings.py# Player settings
+│   └── stub.py           # Stub blueprints for unimplemented services
 ├── realtime/
 │   └── ws_server.py      # WebSocket server (planned)
 ├── data/
-│   └── README.md         # Static data files (JSON configs)
+│   ├── amplitude.json    # Amplitude analytics config
+│   ├── avatar_items.json # All avatar items
+│   ├── config_v2.json    # Server config (MOTD, Photon, CDN, etc.)
+│   ├── consumables.json  # Consumable items
+│   ├── equipment.json    # Equipment & weapons
+│   ├── game_configs.json # Game config key/value pairs
+│   ├── rooms.json        # Default importable rooms
+│   └── README.md         # Data files reference
 └── docs/
     └── api.md            # API endpoint documentation
 ```
