@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
-from config.settings import PORT, DEBUG, CORS_ORIGINS
+from config.settings import PORT, DEBUG, CORS_ORIGINS, SERVICES
 from core.rate_limiter import limiter
 
 # --- Route blueprints ---
@@ -46,7 +46,7 @@ def create_app():
 
     @app.route("/")
     def index():
-        return jsonify({"server": "RecRoot", "status": "running"})
+        return jsonify(SERVICES)
 
     @app.errorhandler(404)
     def not_found(e):
